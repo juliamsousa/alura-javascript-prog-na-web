@@ -1,5 +1,3 @@
-console.log("Starting my script");
-
 // a funcao querySelector seleciona o primeiro elemento
 // para selecionar todos os elementos de determinada classe utilizamos querySelectorAll
 const pacientes = document.querySelectorAll(".paciente");

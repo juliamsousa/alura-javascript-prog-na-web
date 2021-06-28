@@ -11,10 +11,7 @@ addButton.addEventListener("click", (event) => {
   const pacienteInvalido = validaPaciente(paciente);
 
   if(pacienteInvalido.length == 0) {
-    const pacienteTr = criaPacienteTr(paciente);
-  
-    const table = document.querySelector("#tabela-pacientes");
-    table.appendChild(pacienteTr);
+    adicionarPacienteNaTabela(paciente);
 
     const mensagemErro = document.querySelector("#mensagem-erro");
     mensagemErro.innerHTML = "";
@@ -94,4 +91,11 @@ function exibeErros(erros) {
   })
 
    return;
+}
+
+function adicionarPacienteNaTabela(paciente) {
+  const pacienteTr = criaPacienteTr(paciente);
+  
+  const table = document.querySelector("#tabela-pacientes");
+  table.appendChild(pacienteTr);
 }
